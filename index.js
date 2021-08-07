@@ -1,9 +1,13 @@
 // Add your Circle class here
-const pi = Math.PI
+
 
 class Circle{
     constructor(radius){
         this.radius = radius;
+    }
+
+    pi(){
+    return Math.PI
     }
 
     get diameter(){
@@ -11,11 +15,11 @@ class Circle{
     }
 
     get circumference(){
-        return this.radius * 2 * pi
+        return this.radius * 2 * this.pi()
     }
 
     get area(){
-        return pi * this.radius**2
+        return this.pi() * this.radius**2
     }
 
     set diameter(diameter){
@@ -24,11 +28,11 @@ class Circle{
 
     // This seems to break all my tests.
     set circumference(circumference){
-        this.radius =  circumference / 2 / pi
+        this.radius =  circumference / 2 / this.pi()
     }
 
     set area(area){
-         this.radius =  Math.sqrt(area / pi)
+         this.radius =  Math.sqrt(area / this.pi())
     }
 }
 
