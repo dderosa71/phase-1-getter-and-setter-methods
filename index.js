@@ -2,7 +2,11 @@
 class Circle{
     constructor(radius){
         this.radius = radius;
-        pi = Math.PI;
+        // pi = Math.PI;
+    }
+
+     pi(){
+        return Math.PI
     }
 
     get diameter(){
@@ -10,7 +14,7 @@ class Circle{
     }
 
     get circumference(){
-        return this.radius * 2 * pi
+        return this.radius * 2 * pi()
     }
 
     get area(){
